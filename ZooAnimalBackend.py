@@ -45,11 +45,22 @@ def search(species="", name="", age="", feeding=""):
     conn.close()
     return rows
 
+#Delete Functionality
+
+def delete(id):
+    conn=sqlite3.connect("animals.db")
+    cur=conn.cursor()
+    cur.execute("DELETE FROM animals WHERE id=?",(id,))
+    conn.commit()
+    conn.close()
+
+
 
 
 
 connect()
-insert("Donkey","Mr. Donkey",1,"Cookies")
+insert("Lion","Dimitri",4,"Steak")
+delete(2)
 print(view())
-print(search(species="Donkey"))
+print(search(species="Lion"))
 

@@ -4,6 +4,7 @@ Species, Name, Age, Feeding Schedule
 """
 
 from tkinter import *
+import ZooAnimalBackend
 
 # Window outline and creation
 

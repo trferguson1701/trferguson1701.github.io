@@ -6,6 +6,21 @@ Species, Name, Age, Feeding Schedule
 from tkinter import *
 import ZooAnimalBackend
 
+
+#View all functionality
+def view_command():
+    result1.delete(0,END)
+    for row in ZooAnimalBackend.view():
+        result1.insert(END,row)
+
+
+#Search Functionality
+def search_command():
+    result1.delete(0,END)
+    for row in ZooAnimalBackend.search(Species_text.get(),Name_text.get(),Age_text.get(),Feed_text.get()):
+        result1.insert(END,row)
+
+
 # Window outline and creation
 
 window=Tk()
@@ -57,10 +72,10 @@ sb1.configure(command=result1.yview)
 
 #Button Creation
 
-b1=Button(window,text="View All", width=12)
+b1=Button(window,text="View All", width=12,command=view_command)
 b1.grid(row=2,column=3)
 
-b2=Button(window,text="Search", width=12)
+b2=Button(window,text="Search", width=12,command=search_command)
 b2.grid(row=3,column=3)
 
 b3=Button(window,text="Create", width=12)

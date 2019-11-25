@@ -54,13 +54,18 @@ def delete(id):
     conn.commit()
     conn.close()
 
+#Update Functionality
+
+def update(id,species,name,age,feeding):
+    conn=sqlite3.connect("animals.db")
+    cur=conn.cursor()
+    cur.execute("UPDATE animals SET species=?, name=?, age=?, feeding=? WHERE id=?",(species,name,age,feeding,id))
+    conn.commit()
+    conn.close()
 
 
 
 
 connect()
-insert("Lion","Dimitri",4,"Steak")
-delete(2)
-print(view())
-print(search(species="Lion"))
+
 

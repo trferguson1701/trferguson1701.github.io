@@ -48,7 +48,7 @@ l4.grid(row=1,column=2)
 # Text box creation and specs
 
 Species_text=StringVar()
-e1=Entry(window, textvariable=Species_text)
+e1=Entry(window, textvariable=Species_text,bg="PaleGreen3")
 e1.grid(row=0, column=1)
 
 Name_text=StringVar()
@@ -78,7 +78,7 @@ sb1.configure(command=result1.yview)
 
 #Button Creation
 
-b1=Button(window,text="View All", width=12,command=view_command)
+b1=Button(window,text="View All", width=12,command=view_command,bg="green")
 b1.grid(row=2,column=3)
 
 b2=Button(window,text="Search", width=12,command=search_command)
@@ -96,4 +96,7 @@ b5.grid(row=6,column=3)
 b6=Button(window,text="End", width=12)
 b6.grid(row=7,column=3)
 
+
+
+window.configure(bg="PaleGreen1")
 window.mainloop()

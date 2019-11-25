@@ -20,6 +20,12 @@ def search_command():
     for row in ZooAnimalBackend.search(Species_text.get(),Name_text.get(),Age_text.get(),Feed_text.get()):
         result1.insert(END,row)
 
+#Create Functionality
+def create_command():
+    ZooAnimalBackend.insert(Species_text.get(),Name_text.get(),Age_text.get(),Feed_text.get())
+    result1.delete(0,END)
+    result1.insert(END,(Species_text.get(),Name_text.get(),Age_text.get(),Feed_text.get()))
+
 
 # Window outline and creation
 
@@ -78,7 +84,7 @@ b1.grid(row=2,column=3)
 b2=Button(window,text="Search", width=12,command=search_command)
 b2.grid(row=3,column=3)
 
-b3=Button(window,text="Create", width=12)
+b3=Button(window,text="Create", width=12,command=create_command)
 b3.grid(row=4,column=3)
 
 b4=Button(window,text="Update", width=12)

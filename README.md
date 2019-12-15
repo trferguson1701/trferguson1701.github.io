@@ -5,12 +5,12 @@ bachelors degree in computer science and I am nearly complete!
 
 This page includes all sorts of code and projects to better display my skills and capabilities. 
 
-#Skills
--Python
--SQL
--Databases
--Software Engineering
--Data Structure Iplementation
+# Skills
+- Python
+- SQL
+- Databases
+- Software Engineering
+- Data Structure Iplementation
 
 
 
